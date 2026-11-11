@@ -17,6 +17,27 @@
 
   gtag('config', 'AW-18473422946');
 </script>
+
+  <!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+  // Helper function to delay opening a URL until a gtag event is sent.
+  // Call it in response to an action that should navigate to a URL.
+  function gtagSendEvent(url) {
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'ads_conversion_About_Us_1', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+      // <event_parameters>
+    });
+    return false;
+  }
+</script>
+
+  
 </head>
 <body>
 <div class="top"><div class="wrap"><div>📍 RD Number 7, Pram Nagar, Vishwambhar Enclave, Hafeezpet, Hyderabad</div><div>📞 <a href="tel:+917032553708">7032553708</a> &nbsp; | &nbsp; Easy Booking</div></div></div>
